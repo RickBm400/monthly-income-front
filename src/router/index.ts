@@ -1,11 +1,7 @@
 import { createBrowserRouter } from 'react-router';
-import App from '../pages/App';
+import * as routes from '../pages';
+import pathAndComponent from './router.utils';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    Component: App,
-  },
-]);
+const router = createBrowserRouter([pathAndComponent(routes.dashboard)]);
 
 export default router;
