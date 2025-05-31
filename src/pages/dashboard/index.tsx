@@ -1,3 +1,7 @@
 export default function dashboard() {
-  return <>entrada desde el dashboard</>;
+  return (
+    <>
+      <div className="bg-red-600">olamundo</div>
+    </>
+  );
 }
