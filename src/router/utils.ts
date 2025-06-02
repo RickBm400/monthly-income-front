@@ -9,9 +9,11 @@ import { RouteObject } from "react-router";
  */
 export default function pathAndComponent(
   Component: React.ComponentType,
+  index: boolean = false,
 ): RouteObject {
   return {
     path: `/${Component.name}`,
     Component: Component,
+    index,
   };
 }
