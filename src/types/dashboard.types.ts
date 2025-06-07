@@ -31,3 +31,26 @@ export const indicatorsArray: Array<indicator> = [
     type: "TRANSACTION",
   },
 ];
+
+export const todoListArray: Array<any> = [
+  {
+    description: "Compra mensual",
+    done: false,
+    icon: "mdi-shop-card",
+  },
+  {
+    description: "Compra mensual",
+    done: false,
+    icon: "mdi-shop-card",
+  },
+  {
+    description: "Compra mensual",
+    done: false,
+    icon: "mdi-shop-card",
+  },
+  {
+    description: "Compra mensual",
+    done: false,
+    icon: "mdi-shop-card",
+  },
+];
