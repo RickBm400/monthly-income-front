@@ -1,6 +1,5 @@
 import { Card } from "primereact/card";
-import Icon from "@mdi/react";
-import { mdiCheckboxBlankOutline, mdiCheckboxMarked } from "@mdi/js";
+import IconComponent from "./icons.component";
 
 export default function TodoCard() {
   return (
@@ -12,11 +11,11 @@ export default function TodoCard() {
           },
         }}
       >
-        <div className="flex space-x-4">
-          <Icon path={mdiCheckboxBlankOutline} size={1} />
+        <div className="flex space-x-3">
+          <IconComponent name="store" />
           <span>Compra mensual</span>
         </div>
-        <Icon path={mdiCheckboxMarked} size={1} />
+        <IconComponent name="checkBoxMarked" />
       </Card>
     </>
   );
