@@ -4,7 +4,7 @@ import { indicator, indicatorTypeColors } from "../types/dashboard.types";
 export default function IndicatorBar(props: indicator) {
   return (
     <>
-      <Card className="col-span-3 px-6 indicator-card flex items-center">
+      <Card className="col-span-3 px-6 indicator-card flex items-center primary-border">
         <p>
           <span className="title">{props.title}</span>
           <br />

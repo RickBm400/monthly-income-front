@@ -31,7 +31,7 @@ export default function dashboard() {
           {sectionTitle("Variable")}
           <section className="bg-blue-400 row-span-7">holamundo</section>
           {sectionTitle("Tareas pendientes")}
-          <section className=" row-span-7">
+          <section className="space-y-4 row-span-7">
             {todoListArray.map((task, index) => (
               <TodoCard key={index}></TodoCard>
             ))}

@@ -7,15 +7,17 @@ import {
 import Icon from "@mdi/react";
 
 interface props {
-  name: string | "loading";
+  icon: string | "loading";
   size?: number;
   color?: string;
+  className?: string;
 }
 
 export default function IconComponent({
-  name = "loading",
+  icon = "loading",
   size = 1,
   color = "black",
+  className = "",
 }: props) {
   const paths: Record<string, string> = {
     loading: mdiLoading,
@@ -24,5 +26,9 @@ export default function IconComponent({
     checkBoxMarked: mdiCheckboxMarked,
   };
 
-  return <Icon path={paths[name]} size={size} color={color} />;
+  return (
+    <div className={className}>
+      <Icon path={paths[icon]} size={size} color={color} />
+    </div>
+  );
 }
