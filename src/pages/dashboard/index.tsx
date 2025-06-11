@@ -4,6 +4,8 @@ import IndicatorBar from "../../components/Indicator-card.component";
 import TodoCard from "../../components/todo-card.component";
 import { indicatorsArray } from "../../types/components/indicators.types";
 import { todoListArray } from "../../types/components/todo-card.types";
+import { movementList } from "../../types/components/movement.types";
+import MovementCard from "../../components/movement-card.component";
 
 export default function dashboard() {
   const sectionTitle = (title: string): ReactNode => {
@@ -11,34 +13,43 @@ export default function dashboard() {
   };
 
   return (
-    <>
-      <div className="col-span-20 h-full w-full grid grid-flow-col grid-cols-20 gap-4">
-        <div className="col-span-15 grid grid-flow-row grid-rows-16 h-full gap-4 ">
-          <section className="row-span-3 grid grid-flow-col grid-cols-9 gap-4">
-            {indicatorsArray.map((item, index) => (
-              <IndicatorBar {...item} key={index} />
+    <div className="col-span-20 h-full w-full grid grid-flow-col grid-cols-20 gap-4">
+      <div className="col-span-15 grid grid-flow-row grid-rows-16 h-full gap-4">
+        <section className="row-span-3 grid grid-flow-col grid-cols-9 gap-4">
+          {indicatorsArray.map((item, index) => (
+            <IndicatorBar {...item} key={index} />
+          ))}
+        </section>
+
+        {sectionTitle("Flujo de Caja")}
+
+        <section className="bg-gray-400 row-span-6">Gráfica</section>
+
+        {sectionTitle("Movimiemtos Recientes")}
+
+        <section className="row-span-6 flex flex-col">
+          <div className="overflow-y-scroll basis-0 grow">
+            {movementList.map((task, index) => (
+              <MovementCard key={index} {...task}></MovementCard>
             ))}
-          </section>
+          </div>
+        </section>
+      </div>
+      <div className="col-span-5 grid gap-4 grid-flow-row grid-rows-16 ">
+        {sectionTitle("Variable")}
 
-          {sectionTitle("Flujo de Caja")}
+        <section className="bg-blue-400 row-span-7">Estatus</section>
 
-          <section className="bg-gray-400 row-span-6">olamundo</section>
+        {sectionTitle("Tareas pendientes")}
 
-          {sectionTitle("Movimiemtos Recientes")}
-
-          <section className="bg-gray-400 row-span-6"></section>
-        </div>
-        <div className="col-span-5 grid gap-4 grid-flow-row grid-rows-16 ">
-          {sectionTitle("Variable")}
-          <section className="bg-blue-400 row-span-7">holamundo</section>
-          {sectionTitle("Tareas pendientes")}
-          <section className="space-y-4 row-span-7">
+        <section className="row-span-7 flex flex-col">
+          <div className="overflow-y-scroll basis-1 grow space-y-4 ">
             {todoListArray.map((task, index) => (
               <TodoCard key={index} {...task}></TodoCard>
             ))}
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
-    </>
+    </div>
   );
 }
