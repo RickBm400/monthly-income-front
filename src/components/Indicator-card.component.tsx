@@ -1,5 +1,8 @@
 import { Card } from "primereact/card";
-import { indicator, indicatorTypeColors } from "../types/dashboard.types";
+import {
+  indicator,
+  indicatorTypeColors,
+} from "../types/components/indicators.types";
 
 export default function IndicatorBar(props: indicator) {
   return (

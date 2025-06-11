@@ -2,7 +2,8 @@
 import { ReactNode } from "react";
 import IndicatorBar from "../../components/Indicator-card.component";
 import TodoCard from "../../components/todo-card.component";
-import { indicatorsArray, todoListArray } from "../../types/dashboard.types";
+import { indicatorsArray } from "../../types/components/indicators.types";
+import { todoListArray } from "../../types/components/todo-card.types";
 
 export default function dashboard() {
   const sectionTitle = (title: string): ReactNode => {
@@ -33,7 +34,7 @@ export default function dashboard() {
           {sectionTitle("Tareas pendientes")}
           <section className="space-y-4 row-span-7">
             {todoListArray.map((task, index) => (
-              <TodoCard key={index}></TodoCard>
+              <TodoCard key={index} {...task}></TodoCard>
             ))}
           </section>
         </div>
