@@ -4,7 +4,7 @@ import IconComponent from "./icons.component";
 import { IncreaseSvg, DecreaseSvg } from "./vectors/vectors.path";
 export default function MovementCard(props: movementItem) {
   const columnClass = (
-    col: number,
+    col: number = 1,
     justify: string = "start",
     color: string = "898585",
   ) => `col-span-${col} flex justify-${justify} items-center text-[#${color}]`;
