@@ -24,7 +24,7 @@ export default function dashboard() {
 
         {sectionTitle("Flujo de Caja")}
 
-        <section className="row-span-6 flex">
+        <section className="row-span-6">
           <LineChart />
         </section>
 

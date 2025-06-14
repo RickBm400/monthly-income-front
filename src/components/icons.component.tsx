@@ -1,6 +1,7 @@
 import {
   mdiCheckboxBlankOutline,
   mdiCheckboxMarked,
+  mdiDotsHorizontal,
   mdiLoading,
   mdiStore,
 } from "@mdi/js";
@@ -22,6 +23,7 @@ export default function IconComponent({
   const paths: Record<string, string> = {
     loading: mdiLoading,
     store: mdiStore,
+    dots: mdiDotsHorizontal,
     checkBox: mdiCheckboxBlankOutline,
     checkBoxMarked: mdiCheckboxMarked,
   };
