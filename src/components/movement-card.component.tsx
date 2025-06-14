@@ -7,7 +7,8 @@ export default function MovementCard(props: movementItem) {
     col: number = 1,
     justify: string = "start",
     color: string = "898585",
-  ) => `col-span-${col} flex justify-${justify} items-center text-[#${color}]`;
+  ) =>
+    `col-span-${col.toString()} flex justify-${justify} items-center text-[#${color}]`;
 
   const movementIcons = {
     INCOME: <IncreaseSvg />,

@@ -6,6 +6,7 @@ import { indicatorsArray } from "../../types/components/indicators.types";
 import { todoListArray } from "../../types/components/todo-card.types";
 import { movementList } from "../../types/components/movement.types";
 import MovementCard from "../../components/movement-card.component";
+import LineChart from "../../components/charts/linear-chart.component";
 
 export default function dashboard() {
   const sectionTitle = (title: string): ReactNode => {
@@ -23,7 +24,9 @@ export default function dashboard() {
 
         {sectionTitle("Flujo de Caja")}
 
-        <section className="bg-gray-400 row-span-6">Gráfica</section>
+        <section className="row-span-6 flex">
+          <LineChart />
+        </section>
 
         {sectionTitle("Movimiemtos Recientes")}
 
