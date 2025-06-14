@@ -3,12 +3,8 @@ import { movementItem } from "../types/components/movement.types";
 import IconComponent from "./icons.component";
 import { IncreaseSvg, DecreaseSvg } from "./vectors/vectors.path";
 export default function MovementCard(props: movementItem) {
-  const columnClass = (
-    col: number = 1,
-    justify: string = "start",
-    color: string = "898585",
-  ) =>
-    `col-span-${col.toString()} flex justify-${justify} items-center text-[#${color}]`;
+  const columnClass = (justify: string = "start", color: string = "898585") =>
+    ` flex justify-${justify} items-center text-[#${color}]`;
 
   const movementIcons = {
     INCOME: <IncreaseSvg />,
@@ -32,11 +28,11 @@ export default function MovementCard(props: movementItem) {
           <span className="text-[#AAAAAA] text-[10pt]">by {props.owner}</span>
         </p>
       </div>
-      <div className={columnClass(2)}>${props.total}</div>
-      <div className={columnClass(2)}>{props.card}</div>
-      <div className={columnClass(2)}>{props.date}</div>
-      <div className={columnClass(1, "center")}>
-        <IconComponent icon="checkBox"></IconComponent>
+      <div className={"col-span-2" + columnClass()}>${props.total}</div>
+      <div className={"col-span-2" + columnClass()}>{props.card}</div>
+      <div className={"col-span-2" + columnClass()}>{props.date}</div>
+      <div className={"col-span-1" + columnClass("center")}>
+        <IconComponent icon="dots" className="cursor-pointer" />
       </div>
     </Card>
   );
