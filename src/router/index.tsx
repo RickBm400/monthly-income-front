@@ -1,20 +1,20 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import PathAndComponent from "./utils";
 import Sidebar from "../layouts/sidebar.layout";
-import * as routes from "../pages";
+import * as rt from "../pages";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: () => <Sidebar />,
-    children: [
-      PathAndComponent.create(routes.dashboard).isIndex(),
-      PathAndComponent.create(routes.historic),
-    ],
+    Component: () => <Navigate to="dashboard" />,
   },
   {
-    path: "*",
-    Component: () => <Navigate to="/dashboard" />,
+    path: "",
+    Component: () => <Sidebar />,
+    children: [
+      PathAndComponent.create(rt.dashboard).isIndex(),
+      PathAndComponent.create(rt.historic),
+    ],
   },
 ]);
 
