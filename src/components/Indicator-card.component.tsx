@@ -6,17 +6,18 @@ import {
 
 export default function IndicatorCard(props: indicator) {
   return (
-    <Card className="col-span-3 px-6 indicator-card flex items-center primary-border h-full flex-1">
-      <span className="title font-[600]">{props.title}</span>
-      <br />
-      <span className="total font-[400]">{props.total}</span>
-      <br />
-      <span
-        className="percentage"
-        style={{ color: indicatorTypeColors[props.type] }}
-      >
-        {props.percentage}
-      </span>
+    <Card className="p-4 indicator-card primary-border h-full flex-1 grow-1 basis-1">
+      <div className="flex flex-col gap-2 h-full justify-between ">
+        <div className="flex justify-between">
+          <h3 className="text-sm font-[400]">{props.title}</h3>
+          <span
+            className={`text-[${indicatorTypeColors[props.type]}] text-md font-[500]`}
+          >
+            {props.percentage}
+          </span>
+        </div>
+        <span className="text-2xl font-[700]">{props.total}</span>
+      </div>
     </Card>
   );
 }
