@@ -6,7 +6,7 @@ export default function TodoCard(props: todoCard) {
   return (
     <>
       <Card
-        className="primary-border rounded-[8px] py-4 todo-card__component"
+        className="primary-border rounded-[--corners-sm]] py-4 todo-card__component"
         pt={{
           body: {
             className: "w-full px-2",

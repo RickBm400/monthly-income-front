@@ -11,7 +11,8 @@ export default function IndicatorCard(props: indicator) {
         <div className="flex justify-between">
           <h3 className="text-sm font-[400]">{props.title}</h3>
           <span
-            className={`text-[${indicatorTypeColors[props.type]}] text-md font-[500]`}
+            style={{ color: indicatorTypeColors[props.type || "INCOME"] }}
+            className="text-md font-[600]"
           >
             {props.percentage}
           </span>

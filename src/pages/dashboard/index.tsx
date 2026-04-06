@@ -1,6 +1,8 @@
 // import HistoricList from "../../components/historic-list.component";
 
+import { DounugthChart } from "../../components/charts/dounugth-chart.component";
 import IndicatorCard from "../../components/Indicator-card.component";
+import { Subtitle } from "../../components/shared/SectionTitle";
 
 export default function dashboard() {
   return (
@@ -26,13 +28,16 @@ export default function dashboard() {
             title="Income"
             total="$ 1.000.000"
             percentage="+10%"
-            type="INCOME"
+            type="EXPENSE"
           />
         </div>
         <div className="row-span-4 bg-green-100">ola</div>
         <div className="row-span-3 bg-green-100">ola</div>
       </div>
-      <div className="col-span-4 bg-gray-400 grow-1">a</div>
+      <div className="col-span-4 bg-gray-100 grow-1 p-4 rounded-[--corners-sm]]">
+        <Subtitle text="Category Distribution" className="pb-4" />
+        <DounugthChart />
+      </div>
     </div>
   );
 }

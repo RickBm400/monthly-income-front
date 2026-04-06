@@ -1,5 +1,5 @@
 export const DecreaseSvg = () => (
-  <div className="h-full w-[50px] rounded-[8px] bg-[#F3C7C2] grid items-center justify-center">
+  <div className="h-full w-[50px] rounded-[--corners-sm]] bg-[#F3C7C2] grid items-center justify-center">
     <svg
       width="30"
       height="30"
@@ -18,7 +18,7 @@ export const DecreaseSvg = () => (
 );
 
 export const IncreaseSvg = () => (
-  <div className="h-full w-[50px] rounded-[8px] bg-[#C2F3D0] grid items-center justify-center">
+  <div className="h-full w-[50px] rounded-[--corners-sm]] bg-[#C2F3D0] grid items-center justify-center">
     <svg
       width="30"
       height="30"

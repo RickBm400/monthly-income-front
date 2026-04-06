@@ -35,7 +35,7 @@ export default function Sidebar() {
             },
             item: {
               className:
-                "text-[14px] py-2 px-3 rounded-[8px] text-white font-[500]",
+                "text-[14px] py-2 px-3 rounded-[--corners-sm]] text-white font-[500]",
             },
           }}
           value={selectedItem}
